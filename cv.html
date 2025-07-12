@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV | Banele Mchunu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* CV Specific Styles */
+    .cv-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      line-height: 1.6;
+    }
+    
+    .cv-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #e3f2fd;
+      padding-bottom: 1.5rem;
+    }
+    
+    .cv-header h1 {
+      color: #28657e;
+      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+    }
+    
+    .cv-header .title {
+      color: #666;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .cv-section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .cv-section h2 {
+      color: #28657e;
+      border-bottom: 1px solid #e3f2fd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+    
+    .cv-item {
+      margin-bottom: 1.8rem;
+    }
+    
+    .cv-item h3 {
+      color: #2c3e50;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+    
+    .cv-item .subtitle {
+      font-weight: 500;
+      color: #28657e;
+      margin-bottom: 0.3rem;
+    }
+    
+    .cv-item .date {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    
+    .cv-item ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    
+    .cv-item li {
+      margin-bottom: 0.4rem;
+      position: relative;
+    }
+    
+    .cv-item li::before {
+      content: "•";
+      color: #28657e;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    
+    .skills-column {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .skill-tag {
+      background: #e3f2fd;
+      color: #28657e;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #28657e;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .download-btn:hover {
+      background: #1e7cb3;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(30, 124, 179, 0.3);
+    }
+    
+    .download-icon {
+      width: 18px;
+      height: 18px;
+    }
+    
+    @media (max-width: 768px) {
+      .cv-container {
+        padding: 2rem;
+      }
+      
+      .skills-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+    
+    @media print {
+      body {
+        background: white !important;
+        font-size: 12pt;
+      }
+      .cv-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .main-header, .main-footer, .no-print {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+ <header class="main-header">
+    <div class="container nav-container">
+        <a href="index.html"> <img src="images/SysNexa.png" alt="Logo" class="logo"></a>
+
+
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a href="contact.html" class="btn btn-primary">Get Free Consultant</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary mobile-btn">Get Free Consultant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="section-title">
+        <h1>Curriculum Vitae</h1>
+        <p>Detailed professional background and qualifications</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cv-container">
+        <div class="cv-header">
+          <h1>Banele Senzo Mchunu</h1>
+          <p class="title">IT Professional | Business Analyst | Web Developer</p>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <span><img src="icons/icons8-email-50.png" alt="email" srcset="" height="30px"></span>
+              <span>banelesenzo26@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <span><img src="icons/icons8-phone-call-50.png" alt="contact" height="30px"></span>
+              <span>+2778 509 7657</span>
+            </div>
+            <div class="contact-item">
+              <span><img src="icons/icons8-location-50 (1).png" alt="" srcset="" height="30px"></span>
+              <span>Durban, South Africa</span>
+            </div>
+          </div>
+          
+          <a href="path/to/your-cv.pdf" class="download-btn" download="Banele-Mchunu-CV.pdf">
+            <svg class="download-icon" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/>
+            </svg>
+            Download PDF Version
+          </a>
+        </div>
+        
+        <div class="cv-section">
+          <h2>Professional Summary</h2>
+          <p>Detail-oriented IT professional with comprehensive expertise in web development, business analysis, and system design. Adept at bridging technical solutions with business objectives to deliver efficient, user-focused systems. Strong communicator with excellent teamwork abilities and a passion for creating innovative solutions to complex problems.</p>
+        </div>
+        
+        <div class="cv-section">
+          <h2>Skills</h2>
+          <div class="skills-container">
+            <div class="skills-column">
+              <h3>Technical Skills</h3>
+              <div class="skills-list">
+                <span class="skill-tag">Web Development</span>
+                <span class="skill-tag">System Analysis</span>
+                <span class="skill-tag">Database Design</span>
+                <span class="skill-tag">Programming</span>
+                <span class="skill-tag">IT Project Management</span>
+                <span class="skill-tag">Enterprise Solutions</span>
+              </div>
+            </div>
+            
+            <div class="skills-column">
+              <h3>Professional Skills</h3>
+              <div class="skills-list">
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Time Management</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Critical Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cv-section">
+          <h2>Education</h2>
+          <div class="cv-item">
+            <h3>Rosebank College</h3>
+            <span class="subtitle">Bachelor's Degree of Information Technology in Business System</span>
+            <span class="date">2023 - Present</span>
+            <ul>
+              <li>Specializing in Business Systems and Web Technologies</li>
+              <li>Key modules: Web Development, Database Systems, Business Analysis</li>
+            </ul>
+          </div>
+          
+          <!-- Add more education items if needed -->
+        </div>
+        
+        <div class="cv-section">
+          <h2>Professional Experience</h2>
+          <div class="cv-item">
+            <h3>Freelance IT Consultant</h3>
+            <span class="date">2024 - Present</span>
+            <ul>
+              <li>Developed and maintained responsive websites for small businesses</li>
+              <li>Conducted business analysis to identify client needs and technical requirements</li>
+              <li>Implemented database solutions to improve data management</li>
+              <li>Collaborated with cross-functional teams to deliver projects on time</li>
+            </ul>
+          </div>
+          
+          <!-- Add more experience items as needed -->
+        </div>
+        
+        <div class="cv-section">
+          <h2>Projects</h2>
+          <div class="cv-item">
+            <h3>Student Management System</h3>
+            <span class="date">2023</span>
+            <ul>
+              <li>Developed a web-based system for tracking student records</li>
+              <li>Implemented secure database architecture</li>
+              <li>Worked in a team of 3 developers using Agile methodology</li>
+            </ul>
+          </div>
+          <!-- Add more projects as needed -->
+        </div>
+        
+        <div class="cv-section no-print">
+          <a href="contact.html" class="download-btn">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2025 Banele Senzo Mchunu. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

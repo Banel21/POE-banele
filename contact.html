@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Banele Mchunu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container nav-container">
+     <a href="index.html"> <img src="images/SysNexa.png" alt="Logo" class="logo"></a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a href="contact.html" class="btn btn-primary">Get Free Consultant</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary mobile-btn">Get Free Consultant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="section-title">
+        <h1>Contact Me</h1>
+        <p>Get in touch for projects or collaborations</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Direct Contact</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>banelesenzo26@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><img src="icons/icons8-phone-call-50.png" alt="" srcset="" height="30px"></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+2778 509 7657</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIMPLE WORKING FORM -->
+        <div class="contact-form">
+          <form 
+            action="https://formsubmit.co/banelesenzo26@gmail.com" 
+            method="POST"
+          >
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New website message!">
+            <input type="hidden" name="_autoresponse" value="Thanks for your message! I'll reply soon.">
+            <input type="hidden" name="_template" value="basic">
+            
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+              Send Message
+            </button>
+
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2025 Banele Senzo Mchunu. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

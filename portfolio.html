@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Banele Mchunu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Portfolio-specific styles */
+    .portfolio-empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin: 2rem 0;
+    }
+    
+    .portfolio-empty-state img {
+      max-width: 200px;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+    
+    .portfolio-empty-state h2 {
+      color: #28657e;
+      margin-bottom: 1rem;
+    }
+    
+    .portfolio-empty-state p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    
+    .coming-soon-badge {
+      background: #28657e;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    
+    /* Keep existing portfolio grid styles for when you add projects */
+    .portfolio-grid {
+      display: none; /* Hidden until you have projects */
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container nav-container">
+        <a href="index.html"> <img src="images/SysNexa.png" alt="Logo" class="logo"></a>
+
+
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a href="contact.html" class="btn btn-primary">Get Free Consultant</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary mobile-btn">Get Free Consultant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="section-title">
+        <h1>My Portfolio</h1>
+        <p>Quality work that delivers results</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Empty State (Visible when no projects) -->
+      <div class="portfolio-empty-state">
+        <img src="icons/icons8-progress-indicator-50.png" alt="Work in progress">
+        <h2>Portfolio Under Construction</h2>
+        <p>I'm currently working on exciting projects that will be showcased here soon. This space will feature my completed work across web development, business analysis, and system design.</p>
+        <div class="coming-soon-badge">Coming Soon</div>
+      </div>
+      
+      <!-- Portfolio Grid (Hidden until you add projects) -->
+      <div class="portfolio-grid" style="display: none;">
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Design</button>
+          <button class="filter-btn" data-filter="app">Applications</button>
+          <button class="filter-btn" data-filter="analysis">Business Analysis</button>
+        </div>
+
+        <!-- EXAMPLE PROJECT STRUCTURE (hidden) -->
+        <div class="portfolio-item" data-category="web" style="display: none;">
+          <img src="images/project-placeholder.jpg" alt="Project 1" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>Project Title</h3>
+            <p>Brief project description</p>
+            <a href="#" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #eef0f5;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ready to Start Your Project?</h2>
+        <p>While my portfolio is being prepared, I'm available for new opportunities.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2025 Banele Senzo Mchunu. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Simple script to enable the portfolio when ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // When you have projects, change this to true
+      const hasProjects = false;
+      
+      if (hasProjects) {
+        document.querySelector('.portfolio-empty-state').style.display = 'none';
+        document.querySelector('.portfolio-grid').style.display = 'block';
+      }
+      
+      // Filter functionality will work when you add projects
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Filter logic will go here when you have projects
+        });
+      });
+    });
+  </script>
+</body>
+</html>
